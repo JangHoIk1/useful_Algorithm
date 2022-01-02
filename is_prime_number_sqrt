@@ -1,0 +1,22 @@
+import math
+
+def is_prime_number(x):
+    for i in range(2,int(math.sqrt(x))+1): 
+        if x%i==0:
+            return False
+    return True
+
+
+print(is_prime_number(3))
+
+
+'''
+소수 N을 판별 할 때에는 1~N 까지 나누어지는 수가 2개, 즉 1과 본인 N이 약수이면 된다.
+하지만 1부터 N까지 일일히 모두 나누어서 확인한다면 시간복잡도가 높다.
+
+약수의 성질
+이때 N의 제곱근까지 2부터 N-1까지 나누어서 나누어 떨어지지 않는다면 그것은 소수이다.
+
+
+
+'''
